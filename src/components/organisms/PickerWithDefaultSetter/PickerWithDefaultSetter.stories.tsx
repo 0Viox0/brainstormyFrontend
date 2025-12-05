@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Tooltip } from './Tooltip';
+import { PickerWithDefaultSetter } from './PickerWithDefaultSetter.1';
 
 const meta = {
-  component: Tooltip,
-} satisfies Meta<typeof Tooltip>;
+  component: PickerWithDefaultSetter,
+} satisfies Meta<typeof PickerWithDefaultSetter>;
 
 export default meta;
 
@@ -12,10 +12,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    position: {
-      x: 2,
-      y: 3,
-    },
-    text: 'Choose strategy',
+    onOptionPick: () => {},
   },
 };
